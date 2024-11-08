@@ -1,0 +1,33 @@
+<div class="mt-6 max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+  <h1 class="text-2xl font-bold mb-4">Your Account</h1>
+
+  <div *ngIf="!isLoggedIn">
+    <h2 class="text-xl font-semibold">Sign In</h2>
+    <form (submit)="onSubmit()">
+      <input [(ngModel)]="username" name="username" placeholder="Username" required class="border rounded p-2 w-full mb-2" />
+      <input [(ngModel)]="password" type="password" name="password" placeholder="Password" required class="border rounded p-2 w-full mb-4" />
+      <button type="submit" class="bg-blue-600 text-white p-2 rounded">Sign In</button>
+  </form>
+  
+  </div>
+
+  <div *ngIf="isLoggedIn">
+    <button (click)="logout()" class="bg-red-600 text-white p-2 rounded mb-4">Logout</button>
+    
+    <div class="mt-6">
+      <h2 class="text-xl font-semibold">Orders</h2>
+      <div *ngFor="let order of orders" class="border-b border-gray-300 py-2">
+        <p class="text-gray-800">Item: {{ order }}</p>
+      </div>
+      <div *ngIf="orders.length === 0" class="text-gray-600">No orders yet.</div>
+    </div>
+
+    <div class="mt-6">
+      <h2 class="text-xl font-semibold">Favourites</h2>
+      <div *ngFor="let favourite of favourites" class="border-b border-gray-300 py-2">
+        <p class="text-gray-800">Item: {{ favourite }}</p>
+      </div>
+      <div *ngIf="favourites.length === 0" class="text-gray-600">No favourites yet.</div>
+    </div>
+  </div>
+</div>

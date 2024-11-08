@@ -1,0 +1,25 @@
+<div class="login-container flex justify-center items-center min-h-screen">
+  <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Login</h2>
+    <form (submit)="login()" class="space-y-4">
+      <div>
+        <label for="user_name" class="block text-sm font-medium text-gray-700">Username:</label>
+        <input type="text" id="user_name" [(ngModel)]="user_name" name="user_name" required 
+               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"/>
+      </div>
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required 
+               class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"/>
+      </div>
+      <button type="submit" class="w-full bg-orange-600 text-white font-semibold py-2 rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+        Login
+      </button>
+    </form>
+    <p class="mt-4 text-sm text-gray-600 text-center">
+      <strong>NOTE:</strong> Only 2 users for now<br>
+      <strong>tom</strong> (both username and password)<br> 
+      <strong>john</strong> (both username and password).
+    </p>
+  </div>
+</div>

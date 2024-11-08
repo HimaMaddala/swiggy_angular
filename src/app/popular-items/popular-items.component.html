@@ -1,0 +1,47 @@
+<div class="mt-4 py-6 bg-white mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xl sm:text-2xl font-bold">What's on your mind?</h2>
+    <div class="flex space-x-2">
+      <button (click)="scrollLeft()" class="bg-gray px-2 sm:px-3 py-1 rounded-full shadow-md hover:bg-gray-100">
+        <i class="fas fa-chevron-left text-gray-600"></i>
+      </button>
+      <button (click)="scrollRight()" class="bg-gray px-2 sm:px-3 py-1 rounded-full shadow-md hover:bg-gray-100">
+        <i class="fas fa-chevron-right text-gray-600"></i>
+      </button>
+    </div>
+  </div>
+  <div class="relative">
+    <div class="flex space-x-4 overflow-x-auto scroll-smooth pb-2 scrollbar-hide" #itemsCarousel>
+      <button (click)="showRestaurants('biryani')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/biryani.jpg" alt="Biryani" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+      <button (click)="showRestaurants('pizza')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/pizza.jpg" alt="Pizza" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+      <button (click)="showRestaurants('cake')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/cake.jpg" alt="Cakes" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+      <button (click)="showRestaurants('burger')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/burger.jpg" alt="Burger" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+      <button (click)="showRestaurants('shawarma')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/shawarma.jpg" alt="Shawarma" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+      <button (click)="showRestaurants('icecream')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/icecream.jpg" alt="Ice-Cream" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+      <button (click)="showRestaurants('dosa')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/dosa.jpg" alt="Dosa" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+      <button (click)="showRestaurants('chinese')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/chinese.jpg" alt="Chinese" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+      <button (click)="showRestaurants('gulabjamun')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/gulabjamun.jpg" alt="Gulab Jamun" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+      <button (click)="showRestaurants('kebabs')" class="focus:outline-none transition transform hover:scale-105">
+        <img src="assets/popular_items_assets/kebabs.jpg" alt="Kebabs" class="min-w-[120px] sm:min-w-[140px] h-auto max-h-[140px] sm:max-h-[180px] object-cover" />
+      </button>
+    </div>
+  </div>
+</div>

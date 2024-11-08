@@ -1,0 +1,17 @@
+<div class="my-4 bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+  <ul *ngIf="favoritesItems.length > 0; else noFavorites">
+    <li *ngFor="let item of favoritesItems" class="flex items-start py-4 border-b border-gray-200">
+      <div class="flex items-center w-full">
+        <img [src]="item.img_url" alt="{{ item.name }}" class="w-12 h-12 mr-4" />
+        <div>
+          <p class="font-semibold">{{ item.name }}</p>
+          <p class="text-lg font-bold text-green-500">₹{{ item.price }}</p>
+          <p class="text-sm text-gray-500">{{ item.description }}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ng-template #noFavorites>
+    <p class="text-center text-gray-500">No items added to Favorites</p>
+  </ng-template>
+</div>

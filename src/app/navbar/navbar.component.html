@@ -1,0 +1,97 @@
+<nav class="bg-white shadow-md">
+  <div class="flex items-center justify-between px-4 py-2 mx-auto max-w-7xl">
+    <a (click)="goToHome()" class="flex items-center space-x-2 cursor-pointer">
+      <img src="assets/logo.jpg" alt="Logo" class="w-10 h-10" />
+      <span class="hidden lg:block text-gray-800 text-sm font-semibold">
+        Hyderabad, Telangana, India
+      </span>
+    </a>
+
+    <div class="hidden lg:flex items-center space-x-6">
+      <a href="#" class="flex items-center text-gray-600 hover:text-black space-x-1">
+        <i class="fas fa-tv"></i>
+        <span>Swiggy Corporate</span>
+      </a>
+
+      <div class="relative w-64">
+        <input
+          type="text"
+          placeholder="Search"
+          class="w-full px-4 py-2 pl-10 text-gray-700 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#fc8019]"
+        />
+        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+      </div>
+
+      <a href="#" class="flex items-center text-gray-600 hover:text-black space-x-1">
+        <i class="fas fa-tag"></i>
+        <span>Offers</span>
+      </a>
+
+      <a (click)="goToFavorites()" class="flex items-center text-gray-600 hover:text-black cursor-pointer space-x-1">
+        <i class="far fa-heart"></i>
+        <span>Favorites</span>
+      </a>
+
+      <ng-container *ngIf="!userName">
+        <a (click)="goToLogin()" class="flex items-center text-gray-600 hover:text-black cursor-pointer space-x-1">
+          <i class="far fa-user"></i>
+          <span>Sign In</span>
+        </a>
+      </ng-container>
+
+      <ng-container *ngIf="userName">
+        <div class="flex items-center text-gray-700 font-medium space-x-2">
+          <i class="fas fa-user"></i>
+          <span>{{ userName }}</span>
+        </div>
+
+        <a (click)="goToCart()" class="flex items-center text-gray-600 hover:text-black cursor-pointer space-x-1">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Cart</span>
+        </a>
+
+        <a (click)="logout()" class="flex items-center text-gray-600 hover:text-black cursor-pointer space-x-1">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </ng-container>
+    </div>
+
+    <div class="flex lg:hidden justify-between space-x-2 relative">
+      <div class="relative w-8/12">
+        <input
+          type="text"
+          placeholder="Search"
+          class="w-full px-4 py-2 pl-10 text-gray-700 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#fc8019]"
+        />
+        <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+      </div>
+
+      <ng-container *ngIf="!userName">
+        <a (click)="toggleDropdown()" class="flex items-center text-gray-600 hover:text-black cursor-pointer space-x-1">
+          <i class="fas fa-user"></i>
+          <span>Sign In</span>
+        </a>
+      </ng-container>
+
+      <ng-container *ngIf="userName">
+        <div (click)="toggleDropdown()" class="flex items-center text-gray-700 font-medium cursor-pointer space-x-1">
+          <i class="fas fa-user"></i>
+          <span>{{ userName }}</span>
+        </div>
+      </ng-container>
+
+      <div 
+        *ngIf="dropdownOpen" 
+        class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-10"
+      >
+        <button (click)="toggleDropdown()" class="absolute top-2 right-2 text-gray-400 hover:text-black">
+          <i class="fas fa-times"></i>
+        </button>
+        <a (click)="goToFavorites()" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Favorites</a>
+        <a (click)="goToCart()" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Cart</a>
+        <a *ngIf="userName" (click)="logout()" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-black">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>

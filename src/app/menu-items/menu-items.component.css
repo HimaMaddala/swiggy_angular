@@ -1,0 +1,18 @@
+@keyframes slideIn {
+    from {
+      bottom: -80px;
+    }
+    to {
+      bottom: 16px;
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      bottom: 16px;
+    }
+    to {
+      bottom: -80px;
+    }
+  }
+  
