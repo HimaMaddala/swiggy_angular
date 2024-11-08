@@ -29,6 +29,14 @@ Business logic is organized using services located in the `src/app/services` fol
 ### Styling
 - **Tailwind CSS**: The app is styled using Tailwind CSS for a responsive, professional UI.
 
+### Icons
+**Font Awesome**: Font Awesome icons are used throughout the app.
+
+#### Installation
+1. Install Font Awesome:
+   ```bash
+   npm install @fortawesome/fontawesome-free
+
 ## Demo Users
 For demonstration, only two users are available:
 - **User 1**: Username - `tom`, Password - `tom`
