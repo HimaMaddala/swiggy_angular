@@ -6,7 +6,7 @@ This project is a Swiggy-like clone built using Angular 17, styled with Tailwind
 
 ### User Sign-In and Session Management
 - Users can sign in with predefined credentials:
-  - Username and Password for both users: `tom` and `john`
+  - Username and Password for both users: `tom(username and password)` and `john(username and password)`
 - After signing in, a session is created that enables users to manage their cart and favorites.
 - Cart and favorite items are synced between MockAPI and `localStorage` for consistent user experience across sessions.
 
